@@ -29,9 +29,6 @@ class StudentController extends Controller
         return redirect(route('student.index'));
     }
 
-    // public function show(string $id)
-    // {       
-    // }
     public function edit(Student $student)
     {
         return view('students.edit', ['student' => $student]);
@@ -69,6 +66,61 @@ class StudentController extends Controller
         return redirect()->route('student.index')->with('success', 'Student deleted successfully.');
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -151,8 +203,12 @@ class StudentController extends Controller
 //     $student = Student::find($id);
 
 //     if (!$student) {
-//         return redirect()->route('students.index')->with('error', 'Student not found.');
+    //         return redirect()->route('students.index')->with('error', 'Student not found.');
 //     }
 
 //     return view('students.edit', ['student' => $student]);
+// }
+
+// public function show(string $id)
+// {       
 // }

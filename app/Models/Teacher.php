@@ -9,10 +9,22 @@ class Teacher extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'teacherid';
+    protected $fillable = ['name'];
 
     public function courses()
     {
-        return $this->hasMany(Course::class, 'teacherid', 'teacherid');
+        return $this->hasMany(Course::class);
     }
 }
+
+// class Teacher extends Model
+// {
+//     use HasFactory;
+
+//     protected $primaryKey = 'teacherid';
+
+//     public function courses()
+//     {
+//         return $this->hasMany(Course::class, 'teacherid', 'teacherid');
+//     }
+// }

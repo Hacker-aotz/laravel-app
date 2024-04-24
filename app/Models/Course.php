@@ -9,10 +9,22 @@ class Course extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'coursecode';
+    protected $fillable = ['course_code', 'course_title',];
 
     public function teacher()
     {
-        return $this->belongsTo(Teacher::class, 'teacherid', 'teacherid');
+        return $this->belongsTo(Teacher::class);
     }
 }
+
+// class Course extends Model
+// {
+//     use HasFactory;
+
+//     protected $primaryKey = 'coursecode';
+
+//     public function teacher()
+//     {
+//         return $this->belongsTo(Teacher::class, 'teacherid', 'teacherid');
+//     }
+// }
